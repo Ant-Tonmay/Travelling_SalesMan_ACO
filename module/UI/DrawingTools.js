@@ -8,27 +8,30 @@ class DrawingTools {
 		this.ctx.fillRect(point.x, point.y, 5, 5);
 		//this.ctx.fillRect();
 	} 
-	static drawLine = (point1, point2) => {
+	static drawLine = (point1, point2,color='black') => {
 		this.ctx.beginPath();
 		this.ctx.moveTo(point1.x, point1.y);
 		this.ctx.lineTo(point2.x, point2.y);
+		this.ctx.strokeStyle = color
 		this.ctx.stroke();
 	}
 	static drawCircle = (center, radius) => {
 		this.ctx.beginPath();
 		this.ctx.arc(Math.round(center.x), Math.round(center.y), radius, 0, 2 * Math.PI);
+		
 		this.ctx.stroke();
 	}
-	static drawFilledCircle(center, radius) {
+	static drawFilledCircle(center, radius,color='black') {
 		this.ctx.beginPath();
 		this.ctx.arc(center.x, center.y, radius, 0, 2 * Math.PI);
+		this.ctx.fillStyle = color
 		this.ctx.fill();
 	}
-	static drawGraph = (allPoints) => {
+	static drawGraph = (allPoints,color='black') => {
 		let lastIdx = allPoints.length - 1;
 		allPoints.forEach((point, idx) => {
 			if(idx != lastIdx)
-				this.drawLine(point, allPoints[lastIdx]);
+				this.drawLine(point, allPoints[lastIdx],color);
 		});
 	}
 	static drawImage = (point) => {

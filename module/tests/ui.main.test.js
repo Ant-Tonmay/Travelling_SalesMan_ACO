@@ -38,8 +38,8 @@ playButton.addEventListener("click", async() => {
 
 	function drawBestPath(path) {
 		ctx.beginPath();
-		ctx.strokeStyle = "red";
-		ctx.lineWidth = 2;
+		ctx.strokeStyle = "lightgreen";
+		ctx.lineWidth = 4;
 	  
 		for (let i = 0; i < path.length; i++) {
 		  const [x1, y1] = cityCoords[path[i]];

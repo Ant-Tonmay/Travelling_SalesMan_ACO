@@ -96,10 +96,10 @@ class Animation {
 		ctx.clearRect(0, 0, fullWidth, fullHeight);
 		let allPoints = Array();
 		this.appState.points.forEach((point, index) => {
-			DrawingTools.drawCircle(point, 30);
+			DrawingTools.drawFilledCircle(point, 30,'black');
 			DrawingTools.drawFilledCircle(
 				this.appState.ants[index].currentPos,
-				10
+				10,'red'
 			);
 			//allPoints.push(point);
 			//if (allPoints.length > 1) DrawingTools.drawGraph(allPoints);

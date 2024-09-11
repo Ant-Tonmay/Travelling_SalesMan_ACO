@@ -5,7 +5,7 @@ class TestUtils {
 			appState.addNewAnt();
 		});
 	}
-	static fakeAlgo(appState) {
+	static simulateAlgo(appState) {
 		appState.ants.forEach((ant, ind) => {
 
 			let totalPoints = appState.points.length;
