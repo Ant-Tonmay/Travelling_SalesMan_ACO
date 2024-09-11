@@ -1,0 +1,12 @@
+body {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+}
+canvas {
+	border: 1px solid #000;
+}
+#menu {
+	height: 500px;
+	width: 300px;
+}
