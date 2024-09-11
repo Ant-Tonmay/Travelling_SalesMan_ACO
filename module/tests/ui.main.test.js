@@ -80,7 +80,8 @@ playButton.addEventListener("click", async() => {
 	
 	appState.ants.forEach((ant, index) => {
 		ant.sequence = all_paths[index];
-		console.log(ant.sequence);
+		ant.sequence.push(0)
+		console.log(`Ant seq:${ant.sequence}`);
 	});
 	
 	
